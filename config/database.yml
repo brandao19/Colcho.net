@@ -1,17 +1,17 @@
 default: &default
   adapter: postgresql
-  host: ec2-54-225-168-181.compute-1.amazonaws.com
-  username: fffyzptdsqaqyd
-  password: uMpy4-IMexa6EgD6sF5h39W5hv
+  host: localhost	
+  username: postgres
+  password: postgres
   pool: 5
 
 development:
   <<: *default
-  database: ddh3nlkdmbo8k
+  database: colchonet_development
 test:
   <<: *default
-  database: ddh3nlkdmbo8k
+  database: colchonet_test
 
 production:
   <<: *default
-  database: ddh3nlkdmbo8k
+  database: colchonet_production
