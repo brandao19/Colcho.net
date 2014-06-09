@@ -1,5 +1,5 @@
 class Signup < ActionMailer::Base
-  default from: 'no-reply@colcho.net'
+  default from: 'padrao@colcho.net'
 
   def confirm_email(user)
     @user = user
@@ -9,7 +9,7 @@ class Signup < ActionMailer::Base
 
     mail({
       to: user.email,
-      bcc: ['sign ups <signups@colcho.net>'],
+      bcc: ['sign ups <signups2@colcho.net>'],
       subject: I18n.t('signup.confirm_email.subject')
     })
   end
